@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Ecommerce</title>
+        <link rel="stylesheet" href="css/all.min.css" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap"
+            rel="stylesheet"
+        />
+        <link rel="stylesheet" href="css/admin.css" />
+    </head>
+    <body>
+        <div class="page">
+            <div class="side-menu">
+                <div class="brand-name">
+                    <h1>Brand</h1>
+                </div>
+                <ul>
+                    <li>
+                        <a href="dashboard.html"
+                            ><i class="fa-solid fa-circle-info fa-fw"></i>
+                            <span>Dashboard</span></a
+                        >
+                    </li>
+                    <li>
+                        <a href="productsCrud.html"
+                            ><i class="fa-brands fa-product-hunt"></i>
+                            <span>Products</span></a
+                        >
+                    </li>
+                    <li>
+                        <a href="categoriesCrud.html"
+                            ><i class="fa-solid fa-list"></i>
+                            <span>Categories</span></a
+                        >
+                    </li>
+                    <li class="active">
+                        <a href="ordersCrud.html"
+                            ><i class="fa-solid fa-table-list"></i>
+                            <span>Orders</span></a
+                        >
+                    </li>
+                </ul>
+            </div>
+            <div class="content">
+                <div class="header">
+                    <div class="nav">
+                        <a href="dashboard.html"
+                            ><i class="fa-solid fa-user"></i>
+                            <span id="admin-name"></span></a
+                        ><a href="#" id="admin-logout">
+                            Logout
+                            <i
+                                class="fa-solid fa-arrow-up-right-from-square"
+                            ></i
+                        ></a>
+                    </div>
+                </div>
+                <div class="container">
+                    <h2 class="cat-name">Orders</h2>
+                    <div id="orders-page" class="orders-page"></div>
+                </div>
+            </div>
+        </div>
+        <script>
+            pageName = "orderCrud";
+            if (!localStorage.getItem("login-data")) {
+                window.location = "index.html";
+            } else {
+                let privilig = +localStorage.getItem("login-data");
+                let allUsers = JSON.parse(localStorage.getItem("users"));
+                let userLogin = allUsers.find((item) => item.id == privilig);
+                if (userLogin.role == "0") {
+                    window.location = "index.html";
+                }
+            }
+        </script>
+        <script src="js/getLocalStorgeItem.js"></script>
+        <script src="js/admin.js"></script>
+        <script src="js/ordersCrud.js"></script>
+    </body>
+</html>

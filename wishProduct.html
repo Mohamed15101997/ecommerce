@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Ecommerce</title>
+        <link rel="stylesheet" href="css/all.min.css" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap"
+            rel="stylesheet"
+        />
+        <link rel="stylesheet" href="css/style.css" />
+    </head>
+    <body>
+        <div class="header">
+            <div class="container">
+                <a href="index.html" class="logo">Brand</a>
+                <ul class="nav">
+                    <li>
+                        <a href="index.html"
+                            ><i class="fa-solid fa-house"></i>&nbspHome</a
+                        >
+                    </li>
+                    <li id="cart-li">
+                        <a href="#" id="cart-icon"
+                            ><i class="fa-solid fa-cart-shopping"></i>&nbspCart
+                            <span class="badge"></span
+                        ></a>
+                        <div class="cart-products">
+                            <div></div>
+                            <button id="btn-viewall">view all</button>
+                        </div>
+                    </li>
+                    <li id="username-li">
+                        <a href="#"
+                            ><i class="fa-solid fa-user"></i>&nbsp
+                            <span></span>
+                        </a>
+                    </li>
+                    <li id="logout-li">
+                        <a href="#"
+                            ><i class="fa-solid fa-right-from-bracket"></i
+                            >&nbspLogOut
+                        </a>
+                    </li>
+                    <li id="login-li">
+                        <a href="login.html">
+                            Login &nbsp
+                            <i class="fa-solid fa-arrow-right-from-bracket"></i
+                        ></a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="container">
+            <h1>Wish List Products</h1>
+            <div id="wish-products-page" class="wish-page"></div>
+            <div class="no-wish-product"></div>
+        </div>
+        <script src="js/getLocalStorgeItem.js"></script>
+        <script src="js/header.js"></script>
+        <script src="js/wish.js"></script>
+    </body>
+</html>

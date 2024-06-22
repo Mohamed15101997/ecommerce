@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Login or Register</title>
+        <link rel="stylesheet" href="css/login.css" />
+    </head>
+    <body>
+        <div class="container">
+            <div class="form-container">
+                <!-- Login Form -->
+                <form id="login-form" class="form">
+                    <h2>Login</h2>
+                    <input
+                        type="text"
+                        id="login-email"
+                        placeholder="Email"
+                        required
+                        autofocus
+                    />
+                    <input
+                        type="password"
+                        id="login-password"
+                        placeholder="Password"
+                        required
+                    />
+                    <button type="button" onclick="login()">Login</button>
+                    <p id="login-error" class="error-message"></p>
+                    <div>
+                        Don't have an account?
+                        <span
+                            id="register-link"
+                            onclick="toggleForm('register')"
+                            ><u> Register</u></span
+                        >
+                    </div>
+                </form>
+
+                <!-- Registration Form -->
+                <form id="register-form" class="form">
+                    <h2>Register</h2>
+                    <input
+                        type="text"
+                        id="register-username"
+                        placeholder="Username"
+                        required
+                    />
+                    <input
+                        type="text"
+                        id="register-email"
+                        placeholder="Email"
+                        required
+                    />
+                    <input
+                        type="password"
+                        id="register-password"
+                        placeholder="Password"
+                        required
+                    />
+                    <input
+                        type="password"
+                        id="register-confirm-password"
+                        placeholder="Confirm Password"
+                        required
+                    />
+                    <select id="register-role">
+                        <option value="0">Customer</option>
+                        <option value="1">Admin</option>
+                    </select>
+                    <button type="button" onclick="register()">Register</button>
+                    <p id="register-error" class="error-message"></p>
+                    <div>
+                        Already have an account?
+                        <span id="login-link" onclick="toggleForm('login')"
+                            ><u> Login</u></span
+                        >
+                    </div>
+                </form>
+            </div>
+        </div>
+        <script src="js/login.js"></script>
+    </body>
+</html>

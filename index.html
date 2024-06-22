@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Ecommerce</title>
+        <link rel="stylesheet" href="css/all.min.css" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap"
+            rel="stylesheet"
+        />
+        <link rel="stylesheet" href="css/style.css" />
+    </head>
+    <body>
+        <div class="header">
+            <div class="container">
+                <a href="#" class="logo">Brand</a>
+                <ul class="nav">
+                    <li>
+                        <a href="#"
+                            ><i class="fa-solid fa-house"></i>&nbspHome</a
+                        >
+                    </li>
+                    <li>
+                        <a href="#" id="wishList-icon"
+                            ><i class="fa-regular fa-star"></i>&nbspWishList</a
+                        >
+                        <div class="wishList-products">
+                            <div></div>
+                            <button id="btn-viewAllWish">view all</button>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="#contact"> ContactUS</a>
+                    </li>
+                    <li id="cart-li">
+                        <a href="#" id="cart-icon"
+                            ><i class="fa-solid fa-cart-shopping"></i>&nbspCart
+                            <span class="badge"></span
+                        ></a>
+                        <div class="cart-products">
+                            <div></div>
+                            <button id="btn-viewall">view all</button>
+                        </div>
+                    </li>
+                    <li id="username-li">
+                        <a href="#"
+                            ><i class="fa-solid fa-user"></i>&nbsp
+                            <span></span>
+                        </a>
+                    </li>
+                    <li id="logout-li">
+                        <a href="#"
+                            ><i class="fa-solid fa-right-from-bracket"></i
+                            >&nbspLogOut
+                        </a>
+                    </li>
+                    <li id="login-li">
+                        <a href="login.html">
+                            Login &nbsp
+                            <i class="fa-solid fa-arrow-right-from-bracket"></i
+                        ></a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="page">
+            <div class="sidebar">
+                <h3>Categories</h3>
+                <ul id="cats-ul"></ul>
+                <div id="penddingOrder">
+                    <i class="fa-solid fa-hourglass-start"></i
+                    ><span>Pending Order</span>
+                </div>
+                <div id="completedOrder">
+                    <i class="fa-solid fa-clipboard-check"></i
+                    ><span>Completed Order</span>
+                </div>
+            </div>
+            <div id="show-products" class="container show-products"></div>
+        </div>
+        <div class="container">
+            <div class="contact-section" id="contact">
+                <h2>Contact Us</h2>
+                <form>
+                    <input
+                        type="text"
+                        name="name"
+                        placeholder="Your Name"
+                        required
+                    />
+                    <input
+                        type="email"
+                        name="email"
+                        placeholder="Your Email"
+                        required
+                    />
+                    <textarea
+                        name="message"
+                        placeholder="Your Message"
+                        required
+                    ></textarea>
+                    <button type="submit">Send</button>
+                </form>
+            </div>
+        </div>
+
+        <div class="footer">
+            <p>Social</p>
+            <div class="social-icons">
+                <i class="fab fa-facebook-f"></i>
+                <i class="fab fa-twitter"></i>
+            </div>
+            <p class="copyright">
+                &copy; 2024 <span>Developed</span> All Right Reserved
+            </p>
+        </div>
+        <script src="js/getLocalStorgeItem.js"></script>
+        <script src="js/header.js"></script>
+        <script src="js/main.js"></script>
+    </body>
+</html>

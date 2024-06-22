@@ -1,0 +1,340 @@
+/* ================= Start Main Rule ================= */
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family: "Open Sans", sans-serif;
+    text-decoration: none;
+    list-style: none;
+}
+body {
+    background-color: #eee;
+    font-family: "Open Sans", sans-serif;
+}
+.container {
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.container .cat-name {
+    margin: 20px 0;
+    color: #70a1ff;
+    text-align: center;
+    font-size: 40px;
+}
+/* ================= End Main Rule ================= */
+/* ================= Start Side Menu ================= */
+.side-menu {
+    background-color: white;
+    position: relative;
+    width: 400px;
+    height: 100vh;
+    box-shadow: 0 0 10px #ddd;
+}
+.side-menu .brand-name {
+    height: 53px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.side-menu li {
+    font-size: 24px;
+    padding: 10px 40px;
+    display: flex;
+    align-items: center;
+}
+.side-menu li a {
+    color: #444;
+}
+.side-menu li:hover {
+    background-color: #ddd;
+}
+.side-menu li:hover a {
+    color: black;
+    padding-left: 8px;
+    font-weight: bold;
+}
+.side-menu li:hover i {
+    color: #70a1ff;
+}
+li.active {
+    background-color: #ddd;
+}
+li.active a {
+    color: black;
+    padding-left: 8px;
+    font-weight: bold;
+}
+li.active i {
+    color: #70a1ff;
+}
+@media (max-width: 992px) {
+    .side-menu li a span {
+        display: none;
+    }
+    .side-menu {
+        width: 100px;
+    }
+    .brand-name h1 {
+        font-size: 20px;
+    }
+}
+/* ================= End Side Menu ================= */
+/* ================= Start Navbar ================= */
+.page {
+    display: flex;
+    justify-content: space-between;
+}
+.content {
+    width: 100%;
+}
+.content .header {
+    height: 53px;
+    background-color: white;
+    box-shadow: 0 0 10px #ddd;
+}
+.content .header .nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.content .header .nav a {
+    color: #333;
+    font-size: 24px;
+    font-weight: bold;
+    padding: 10px;
+}
+.content .header .nav a:hover {
+    background-color: #eee;
+}
+/* ================= End Navbar ================= */
+/* ================= Start Orders Page ================= */
+.orders-page {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+    gap: 10px;
+    padding: 20px;
+}
+.orders-page .card-order {
+    display: grid;
+    grid-template-columns: 1fr auto auto;
+    gap: 2px;
+    align-items: center;
+    background-color: white;
+    box-shadow: 0 2px 15px rgb(0 0 0/10%);
+    border: 2px solid white;
+    border-radius: 20px;
+}
+.orders-page .card-order .order-container {
+    display: flex;
+}
+.orders-page .card-order img {
+    width: 100px;
+    height: 100px;
+    border: 2px solid white;
+    border-radius: 50%;
+}
+.orders-page .card-order h4 {
+    margin-top: 15px;
+}
+.orders-page .card-order .amount-container,
+.orders-page .card-order .price-container {
+    font-size: 22px;
+    color: #444;
+    font-weight: bold;
+    margin: 12px;
+}
+.orders-page .card-order .price-container span {
+    color: #c23616;
+}
+.orders-page .card-order .total-price {
+    text-align: center;
+    font-size: 25px;
+    padding: 10px;
+    font-weight: bold;
+    color: #777;
+    grid-column: span 3;
+}
+.orders-page .card-order .total-price span {
+    color: #007bff;
+}
+.orders-page .card-order .total-price span.rejected {
+    color: #c23616;
+}
+.orders-page .card-order .total-price span.completed {
+    color: #00b894;
+}
+.orders-page .card-order .btns-cont {
+    text-align: center;
+    padding: 10px;
+    grid-column: span 3;
+}
+.orders-page .card-order .btns-cont span {
+    font-size: 18px;
+    font-weight: bold;
+    color: white;
+    padding: 6px;
+    border-radius: 40px;
+}
+.orders-page .card-order .btns-cont span.accepted {
+    background-color: #00b894;
+}
+.orders-page .card-order .btns-cont span.rejected {
+    background-color: #c23616;
+}
+.orders-page .card-order .btns-cont span.pending {
+    background-color: #f9ca24;
+}
+.orders-page .card-order .btns-cont button {
+    padding: 7px;
+    color: white;
+    margin: 5px;
+    cursor: pointer;
+    font-weight: bold;
+}
+.orders-page .card-order .btns-cont button.accept {
+    background-color: #00b894;
+    border: 2px solid #00b894;
+}
+.orders-page .card-order .btns-cont button.reject {
+    background-color: #c23616;
+    border: 2px solid #c23616;
+}
+/* ================= End Orders Page ================= */
+/* ================= Start tickets Section ================= */
+.tickets {
+    margin: 20px 0;
+    padding: 20px;
+    display: flex;
+    text-align: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+.tickets .tickets-box {
+    padding: 20px;
+    font-size: 13px;
+    color: #777;
+    width: 150px;
+    border: 1px solid #ccc;
+    background-color: white;
+}
+/* #f59e0b #0075ff #22c55e #f44336  */
+.tickets .tot-orders i {
+    color: #f59e0b;
+}
+.tickets .tot-peOrders i {
+    color: #0075ff;
+}
+.tickets .tot-accOrders i {
+    color: #22c55e;
+}
+.tickets .tot-reOrders i {
+    color: #f44336;
+}
+.tickets .tot-users i {
+    color: #8e44ad;
+}
+.tickets .tot-cats i {
+    color: #00cec9;
+}
+.tickets .tot-prod i {
+    color: #0c2461;
+}
+@media (max-width: 500px) {
+    .tickets .tickets-box {
+        width: 100%;
+    }
+}
+.tickets .tickets-box span {
+    display: block;
+    color: black;
+    font-weight: bold;
+    font-size: 25px;
+    margin-bottom: 5px;
+}
+/* ================= End tickets Section ================= */
+/* ================= Start Show Latest Section ================= */
+.show-latest {
+    padding: 20px;
+    text-align: center;
+}
+.show-latest h3 {
+    color: #007bff;
+    margin: 20px 0;
+}
+/* ================= End Show Latest Section ================= */
+/* ================= Start Table Desgin ================= */
+.responsive-table {
+    overflow-x: auto;
+    background-color: white;
+    border: 2px solid white;
+    border-radius: 10px;
+}
+.responsive-table table {
+    min-width: 250px;
+    border-spacing: 0;
+    font-size: 15px;
+    width: 100%;
+}
+.responsive-table thead td {
+    background-color: #eee;
+    font-weight: bold;
+}
+.responsive-table table td {
+    padding: 15px;
+}
+.responsive-table tbody td {
+    border-bottom: 1px solid #eee;
+    border-left: 1px solid #eee;
+    transition: 0.3s;
+}
+.responsive-table table tbody tr td:last-child {
+    border-right: 1px solid #eee;
+}
+.responsive-tabletbody tr:hover td {
+    background-color: #faf7f7;
+}
+.responsive-table table img {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    padding: 2px;
+    background-color: white;
+}
+.responsive-table table img:not(:first-child) {
+    margin-left: -20px;
+}
+.responsive-table table .label {
+    font-size: 13px;
+}
+.btn-shape {
+    padding: 4px 10px;
+    border-radius: 6px;
+    background-color: red;
+    color: white;
+}
+/* ================= End Table Desgin ================= */
+/* ================= Start Not Item Found ================= */
+.not-found-data div {
+    background-color: white;
+    color: red;
+    padding: 30px;
+    font-weight: bold;
+    position: relative;
+}
+.not-found-data div::after {
+    content: "";
+    position: absolute;
+    top: 4px;
+    right: 15px;
+    width: 7px;
+    height: 90%;
+    background-color: red;
+}
+/* ================= End NotItem Found ================= */
